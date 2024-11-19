@@ -73,6 +73,13 @@ public class Lista {
         }
         return tem;
     }
+
+    public double consumoGas(){
+        Nodo tem = inicio;
+        Conductor c = null;
+        return c.getViajes()*0.12;
+    }
+
     @Override
     public String toString() {
         String salida = "Contenido de Lista \n";

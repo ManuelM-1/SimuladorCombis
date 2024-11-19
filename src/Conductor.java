@@ -1,18 +1,18 @@
 public class Conductor extends Persona {
     private float salario;
     private byte unidad;
-    private double gas;
+    private int viajes;
     private byte asientos;
     private float pasajeTotal;
 
     public Conductor() {
     }
 
-    public Conductor(String nombre, int edad, float salario, byte unidad, double gas, byte asientos, float pasajeTotal) {
+    public Conductor(String nombre, int edad, float salario, byte unidad, int viajes, byte asientos, float pasajeTotal) {
         super(nombre, edad);
         this.salario = salario;
         this.unidad = unidad;
-        this.gas = gas;
+        this.viajes=viajes;
         this.asientos = asientos;
         this.pasajeTotal = pasajeTotal;
     }
@@ -20,7 +20,7 @@ public class Conductor extends Persona {
     public Conductor(String nombre, int edad, float salario, double gas) {
         super(nombre, edad);
         this.salario = salario;
-        this.gas = gas;
+        this.viajes=viajes;
     }
 
     public float getSalario() {
@@ -39,12 +39,12 @@ public class Conductor extends Persona {
         this.unidad = unidad;
     }
 
-    public double getGas() {
-        return gas;
+    public double getViajes() {
+        return viajes;
     }
 
-    public void setGas(double gas) {
-        this.gas = gas;
+    public void setViajes(int viajes) {
+        this.viajes =viajes;
     }
 
     public byte getAsientos() {
@@ -66,7 +66,7 @@ public class Conductor extends Persona {
     @Override
     public String toString() {
         return super.toString() + "\nSalario: " + getSalario() +
-                "\nUnidad: " + getUnidad() + "\nGasolina usada: " + getGas() + "\nNúmero de asientos: " + getAsientos() +
+                "\nUnidad: " + getUnidad() + "\nNúmero de viajes: " + getViajes() + "\nNúmero de asientos: " + getAsientos() +
                 "\nNúmero de pasajeros durante el viaje: " + getPasajeTotal();
     }
 }
